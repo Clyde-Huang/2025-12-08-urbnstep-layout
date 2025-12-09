@@ -1,0 +1,78 @@
+@use '../../../styles/mixins' as *;
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topBox {
+    width: 100%; // 滿版
+    @include center-flex;
+    margin-top: 48px;
+}
+
+.topBoxContent {
+    @include center-flex;
+    width: 100%; // 改這裡：拿掉 max-width
+    height: 96px;
+    background-color: #E8FEC5;
+    gap: 24px;
+}
+
+.addMember {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.rightNowBtn {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    width: 115px;
+    height: 48px;
+    @include center-flex;
+    cursor: pointer;
+}
+
+.bottomBox {
+    width: 100%; // 改這裡：拿掉 max-width
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 312px; // 加左右 padding 控制內容區域
+}
+
+.bottomBoxText {
+    width: 100%;
+    margin-bottom: 48px;
+}
+
+.bottomBoxText ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    width: 100%;
+}
+
+.text1 {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: auto;
+}
+
+.text2,
+.text3 {
+    font-size: 16px;
+}
+
+.copyright {
+    width: 100%;
+    font-size: 14px;
+    color: #6C757D;
+    border-top: 1px solid #DEE2E6;
+    padding-top: 24px;
+    text-align: center;
+}
