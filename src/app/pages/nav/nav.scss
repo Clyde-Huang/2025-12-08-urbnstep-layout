@@ -46,6 +46,18 @@ main {
     font-size: 16px;
 }
 
+.text1 a,
+.text2 a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.text1 a:hover,
+.text2 a:hover {
+    opacity: 0.7;
+}
+
 // //P的。
 // .text1::after {
 //     content: "";

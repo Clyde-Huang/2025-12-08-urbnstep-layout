@@ -1,11 +1,14 @@
 import { Routes } from '@angular/router';
 import { Home } from './pages/home/home';
+import { ProductHomepage } from './pages/product-homepage/product-homepage';
 
 
 export const routes: Routes = [
     //(path:)後面路徑自己命名
 
     { path: 'Home', component: Home },
+    { path: 'ProductHomepage', component: ProductHomepage },
+
 
 
 
