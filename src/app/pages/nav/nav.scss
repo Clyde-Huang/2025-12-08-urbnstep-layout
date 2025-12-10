@@ -38,6 +38,7 @@ main {
 .text1 {
     font-weight: bold;
     font-size: 20px;
+    position: relative
 }
 
 .text2,
@@ -45,8 +46,39 @@ main {
     font-size: 16px;
 }
 
+// //P的。
+// .text1::after {
+//     content: "";
+//     /* 偽元素必須有 content 屬性 */
+
+//     /* 圓點樣式 */
+//     display: block;
+//     width: 8px;
+//     /* 圓點大小 */
+//     height: 8px;
+//     /* 圓點大小 */
+//     background-color: #c0FA73;
+//     /* 綠色，您可以自行調整顏色代碼 */
+//     border-radius: 50%;
+//     /* 讓它變成圓形 */
+
+//     /* 定位：將圓點精確定位在文字右上角 */
+//     position: absolute;
+//     /* top: 0; 會讓圓點的頂部與文字的頂部對齊 */
+//     top: 5px;
+//     /* right: -12px; 讓圓點向右偏移，不要緊貼 P */
+//     right: -2px;
+//     z-index: -1;
+// }
+
+//
+
+
+
+
+
 /* RWD: 768px 以下變成 2*2 佈局 */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     main {
         height: 120px;
     }

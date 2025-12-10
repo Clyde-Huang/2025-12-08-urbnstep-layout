@@ -61,6 +61,7 @@ main {
     font-weight: bold;
     font-size: 20px;
     margin-right: auto;
+    position: relative; //讓P綠點生效
 }
 
 .text2,
@@ -75,4 +76,77 @@ main {
     border-top: 1px solid #DEE2E6;
     padding-top: 24px;
     text-align: center;
+}
+
+//P的。
+// .text1::after {
+//     content: "";
+//     /* 偽元素必須有 content 屬性 */
+
+//     /* 圓點樣式 */
+//     display: block;
+//     width: 8px;
+//     /* 圓點大小 */
+//     height: 8px;
+//     /* 圓點大小 */
+//     background-color: #c0FA73;
+//     /* 綠色，您可以自行調整顏色代碼 */
+//     border-radius: 50%;
+//     /* 讓它變成圓形 */
+
+//     /* 定位：將圓點精確定位在文字右上角 */
+//     position: absolute;
+//     /* top: 0; 會讓圓點的頂部與文字的頂部對齊 */
+//     top: 5px;
+//     /* right: -12px; 讓圓點向右偏移，不要緊貼 P */
+//     right: -2px;
+//     z-index: -1;
+// }
+
+//
+
+
+@media (max-width: 1000px) {
+
+    .addMember {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .rightNowBtn {
+        width: 100%;
+        max-width: 99px;
+        max-height: 40px;
+    }
+
+    .topBoxContent {
+        padding: 24px;
+        gap: 16px;
+    }
+
+
+    .bottomBox {
+        padding: 32px 12px;
+    }
+
+    .bottomBoxText ul {
+        display: block;
+        padding: 12px;
+
+    }
+
+    .text2 {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+}
+
+
+
+@media (max-width: 380px) {
+
+    .topBoxContent {
+        gap: 0;
+        justify-content: space-between;
+    }
 }

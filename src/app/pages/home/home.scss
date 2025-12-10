@@ -32,6 +32,7 @@
      color: white;
      width: 586px;
      height: 223px;
+
      display: grid;
      // justify-content: center;
      align-items: center;
@@ -195,6 +196,20 @@
      display: flex;
      flex-direction: column;
      align-items: center;
+
+ }
+
+ .urbnstep span {
+     color: #C0FA73;
+     font-size: 40px;
+
+ }
+
+ .urbnstep ul {
+     display: flex;
+     list-style: none;
+     gap: 24px;
+
  }
 
  .graytext {
@@ -219,7 +234,7 @@
 
  h2 {
      font-size: 32px;
-     margin-bottom: 20px;
+     margin-bottom: 16px;
  }
 
  .puzzle {
@@ -318,8 +333,133 @@
      grid-row: 3;
  }
 
- @media (max-width: 768px) {
+
+
+
+ @media (max-width: 1000px) {
      nav {
          height: 120px;
      }
+
+     .topBox {
+         width: 100%;
+         max-width: 1920px;
+         height: 480px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-sm.png?raw=true');
+         background-size: cover;
+         background-position: center;
+     }
+
+     .topBoxContent {
+
+         width: 100%;
+         height: auto;
+         display: grid;
+         gap: 8px;
+         align-items: center;
+         margin-left: 0;
+         padding: 0 24px;
+     }
+
+     .yourStep {
+         font-size: 20px;
+     }
+
+     .urbnstep {
+         font-size: 48px;
+     }
+
+     .topBoxBtn {
+         margin-top: 32px;
+     }
+
+     //
+     .fourBox.hotSales .fourBoxPics {
+         display: flex;
+         overflow-x: auto;
+         /* 允許橫向滾動 */
+         overflow-y: hidden;
+         gap: 16px;
+         /* 讓滑動更順暢 */
+
+         scroll-snap-type: x mandatory;
+         /* 可選:滑動時會自動對齊 */
+     }
+
+     .fourBox.hotSales .fourBoxPic {
+         flex-shrink: 0;
+         /* 防止圖片縮小 */
+         width: 300px;
+
+         scroll-snap-align: start;
+         /* 配合 scroll-snap 使用 */
+     }
+
+     //bottombanner RWD
+     .bottomBanner {
+         width: 100%;
+         max-width: 1920px;
+         height: auto;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .bottomBannerPic {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+
+     .bottomBannerPic img {
+         display: block;
+         max-width: 100%;
+         height: auto;
+     }
+
+     .bottomBannerText {
+         position: absolute;
+         color: white;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 64px 12px;
+
+     }
+
+     .urbnstep ul {
+
+         list-style: none;
+         gap: 24px;
+
+     }
+     //bottombanner RWD
+     //
+
+    .fourBox.series .fourBoxPics {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .fourBox.series .fourBoxPic {
+        width: 100%;
+        height: auto;
+    }
+
+    .fourBox.series .fourBoxPic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+h2 {
+     font-size: 24px;
+   
+ }
  }
