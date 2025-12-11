@@ -47,14 +47,16 @@ main {
 }
 
 .text1 a,
-.text2 a {
+.text2 a,
+.text3 a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
 }
 
 .text1 a:hover,
-.text2 a:hover {
+.text2 a:hover,
+.text3 a:hover {
     opacity: 0.7;
 }
 
