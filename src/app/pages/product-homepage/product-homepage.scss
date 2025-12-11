@@ -27,12 +27,47 @@ section {
     font-weight: bold;
 }
 
+// 搜尋框樣式
+.searchBox {
+    width: 100%;
+    max-width: 500px;
+
+    .searchInput {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 16px;
+        border: 2px solid #DEE2E6;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color 0.3s;
+
+        &:focus {
+            border-color: #212529;
+        }
+
+        &::placeholder {
+            color: #ADB5BD;
+        }
+    }
+}
+
+.noResults {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    
+    p {
+        font-size: 18px;
+        color: #6C757D;
+    }
+}
+
 .listSide {
     flex-shrink: 0;
     width: auto;
 }
 
-.listSide>ul {
+.listSide > ul {
     font-size: 16px;
     list-style: none;
     display: flex;
@@ -40,6 +75,21 @@ section {
     gap: 40px;
     padding: 0;
     margin: 0;
+
+    li {
+        cursor: pointer;
+        transition: color 1s;
+        color: #212529;
+        
+        &:hover {
+            color: #57A203;
+        }
+        
+        &.active {
+            color: #57A203;
+            font-weight: bold;
+        }
+    }
 }
 
 .listBox {
@@ -64,14 +114,12 @@ section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-
     width: 100%;
 }
 
 .listContent {
     display: flex;
     flex-direction: column;
-    // gap: 12px;
     margin-bottom: 48px;
 
     img {
@@ -80,7 +128,6 @@ section {
         object-fit: cover;
     }
 
-    // 桌面版：隱藏第10個商品（索引9）
     &.hide-on-desktop {
         display: none;
     }
@@ -89,6 +136,10 @@ section {
 @media(max-width: 1000px) {
     section {
         padding: 16px 12px 16px 12px;
+    }
+
+    .searchBox {
+        max-width: 100%;
     }
 
     .listSide {
@@ -100,7 +151,6 @@ section {
         gap: 12px;
     }
 
-    // 手機版：顯示第10個商品
     .listContent.hide-on-desktop {
         display: flex;
     }
