@@ -1,0 +1,107 @@
+section {
+    padding: 32px 312px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slash {
+    margin: 0 8px;
+    color: #DEE2E6;
+}
+
+.topNav {
+    color: #6C757D;
+    font-size: 14px;
+}
+
+.allProduct {
+    color: #212529;
+}
+
+.girlShoe {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.listSide {
+    flex-shrink: 0;
+    width: auto;
+}
+
+.listSide>ul {
+    font-size: 16px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.listBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 24px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 12px 0 4px 0;
+}
+
+.price {
+    font-size: 16px;
+}
+
+.productGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    width: 100%;
+}
+
+.listContent {
+    display: flex;
+    flex-direction: column;
+    // gap: 12px;
+    margin-bottom: 48px;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    // 桌面版：隱藏第10個商品（索引9）
+    &.hide-on-desktop {
+        display: none;
+    }
+}
+
+@media(max-width: 1000px) {
+    section {
+        padding: 16px 12px 16px 12px;
+    }
+
+    .listSide {
+        display: none;
+    }
+
+    .productGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    // 手機版：顯示第10個商品
+    .listContent.hide-on-desktop {
+        display: flex;
+    }
+}

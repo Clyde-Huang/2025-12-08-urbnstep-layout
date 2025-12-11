@@ -376,6 +376,14 @@
          margin-top: 32px;
      }
 
+     .newArrival {
+         font-size: 32px;
+     }
+
+     .newitem {
+         font-size: 24px;
+     }
+
      //
      .fourBox.hotSales .fourBoxPics {
          display: flex;
@@ -438,28 +446,30 @@
          gap: 24px;
 
      }
+
      //bottombanner RWD
      //
 
-    .fourBox.series .fourBoxPics {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 12px;
-    }
+     .fourBox.series .fourBoxPics {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-template-rows: repeat(2, 1fr);
+         gap: 12px;
+     }
 
-    .fourBox.series .fourBoxPic {
-        width: 100%;
-        height: auto;
-    }
+     .fourBox.series .fourBoxPic {
+         width: 100%;
+         height: auto;
+     }
 
-    .fourBox.series .fourBoxPic img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-h2 {
-     font-size: 24px;
-   
- }
+     .fourBox.series .fourBoxPic img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+     }
+
+     h2 {
+         font-size: 24px;
+
+     }
  }

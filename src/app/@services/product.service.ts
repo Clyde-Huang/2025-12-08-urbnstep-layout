@@ -11,6 +11,6 @@ export class ProductService {
 
   // 讀取所有產品
   getProducts(): Observable<any> {
-    return this.http.get('/assets/data/products.json');
+    return this.http.get('/assets/data/product.json');
   }
 }
