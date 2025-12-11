@@ -1,0 +1,106 @@
+@use '../../../styles/mixins' as *;
+
+
+
+
+
+.topPic {
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week1/hero.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 1920px;
+    height: 400px;
+    // display: flex;
+    // align-items: center;
+    @include center-flex;
+    flex-direction: column;
+    gap: 16px;
+
+}
+
+.brandStoryzh {
+    font-size: 40px;
+}
+
+.brandStoryen {
+    font-size: 28px;
+}
+
+.brandStoryzh,
+.brandStoryen {
+    color: white;
+}
+
+.midBox {
+    padding: 64px 0;
+    @include center-flex;
+}
+
+
+
+.greenBox {
+    width: 100%;
+    max-width: 865px;
+    height: 180px;
+    background-color: #F5FEE7;
+    @include center-flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.greenBoxTxet1 {
+    color: #57A203;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.greenBoxTxet2 {
+    color: #212529;
+    font-size: 16px;
+    text-align: center;
+
+}
+
+@media (max-width: 1000px) {
+    .topPic {
+        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/hero-sm.png');
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        max-width: 1920px;
+        height: 240px;
+        // display: flex;
+        // align-items: center;
+        gap: 8px;
+    }
+
+    .brandStoryzh {
+        font-size: 28px;
+    }
+
+    .brandStoryen {
+        font-size: 20px;
+    }
+
+    .midBox {
+        padding: 32px 12px;
+    }
+
+    .greenBox {
+        height: 260px;
+        padding: 24px;
+    }
+
+    .greenBoxTxet1 {
+        text-align: start;
+    
+    }
+
+    .greenBoxTxet2 {
+        color: #212529;
+        font-size: 16px;
+        text-align: start;
+
+    }
+}
