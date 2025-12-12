@@ -1,95 +1,96 @@
 @use '../../../styles/mixins' as *;
 
 main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .topBox {
-    width: 100%; // 滿版
-    @include center-flex;
-    margin-top: 48px;
+  width: 100%; // 滿版
+  @include center-flex;
+  margin-top: 48px;
 }
 
 .topBoxContent {
-    @include center-flex;
-    width: 100%; // 改這裡：拿掉 max-width
-    height: 96px;
-    background-color: #E8FEC5;
-    gap: 24px;
+  @include center-flex;
+  width: 100%; // 改這裡：拿掉 max-width
+  height: 96px;
+  background-color: #E8FEC5;
+  gap: 24px;
 }
 
 .addMember {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .rightNowBtn {
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    font-size: 16px;
-    width: 115px;
-    height: 48px;
-    @include center-flex;
-    cursor: pointer;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  width: 115px;
+  height: 48px;
+  @include center-flex;
+  cursor: pointer;
 }
 
 .bottomBox {
-    width: 100%; // 改這裡：拿掉 max-width
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 48px 312px; // 加左右 padding 控制內容區域
+  width: 100%; // 改這裡：拿掉 max-width
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 312px; // 加左右 padding 控制內容區域
+  background-color: #F8F9FA;
 }
 
 .bottomBoxText {
-    width: 100%;
-    margin-bottom: 48px;
+  width: 100%;
+  margin-bottom: 48px;
 }
 
 .bottomBoxText ul {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    width: 100%;
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  width: 100%;
 }
 
 .text1 {
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: auto;
-    position: relative; //讓P綠點生效
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: auto;
+  position: relative; //讓P綠點生效
 }
 
 .text2,
 .text3 {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .copyright {
-    width: 100%;
-    font-size: 14px;
-    color: #6C757D;
-    border-top: 1px solid #DEE2E6;
-    padding-top: 24px;
-    text-align: center;
+  width: 100%;
+  font-size: 14px;
+  color: #6C757D;
+  border-top: 1px solid #DEE2E6;
+  padding-top: 24px;
+  text-align: center;
 }
 
 .text1 a,
-.text2 a ,
-.text3 a{
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+.text2 a,
+.text3 a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .text1 a:hover,
 .text2 a:hover,
 .text3 a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 //P的。
@@ -122,45 +123,45 @@ main {
 
 @media (max-width: 1000px) {
 
-    .addMember {
-        font-size: 20px;
-        font-weight: bold;
-    }
+  .addMember {
+    font-size: 20px;
+    font-weight: bold;
+  }
 
-    .rightNowBtn {
-        width: 100%;
-        max-width: 99px;
-        max-height: 40px;
-    }
+  .rightNowBtn {
+    width: 100%;
+    max-width: 99px;
+    max-height: 40px;
+  }
 
-    .topBoxContent {
-        padding: 24px;
-        gap: 16px;
-    }
+  .topBoxContent {
+    padding: 24px;
+    gap: 16px;
+  }
 
 
-    .bottomBox {
-        padding: 32px 12px;
-    }
+  .bottomBox {
+    padding: 32px 12px;
+  }
 
-    .bottomBoxText ul {
-        display: block;
-        padding: 12px;
+  .bottomBoxText ul {
+    display: block;
+    padding: 12px;
 
-    }
+  }
 
-    .text2 {
-        margin-top: 28px;
-        margin-bottom: 28px;
-    }
+  .text2 {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
 }
 
 
 
 @media (max-width: 380px) {
 
-    .topBoxContent {
-        gap: 0;
-        justify-content: space-between;
-    }
+  .topBoxContent {
+    gap: 0;
+    justify-content: space-between;
+  }
 }

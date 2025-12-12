@@ -1,475 +1,479 @@
  main {
-     width: 100%;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
  }
 
  nav {
-     width: 100%;
-     max-width: 1920px;
-     height: 80px;
+   width: 100%;
+   max-width: 1920px;
+   height: 80px;
  }
 
  footer {
-     width: 100%;
-     max-width: 1920px;
-     // padding: 20px;
+   width: 100%;
+   max-width: 1920px;
+   // padding: 20px;
  }
 
  .topBox {
-     width: 100%;
-     max-width: 1920px;
-     height: 800px;
-     display: flex;
-     align-items: center;
-     background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner.png?raw=true');
-     background-size: cover;
-     background-position: center;
+   width: 100%;
+   max-width: 1920px;
+   height: 800px;
+   display: flex;
+   align-items: center;
+   background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner.png?raw=true');
+   background-size: cover;
+   background-position: center;
  }
 
  .topBoxContent {
-     color: white;
-     width: 586px;
-     height: 223px;
+   color: white;
+   width: 586px;
+   height: 223px;
 
-     display: grid;
-     // justify-content: center;
-     align-items: center;
-     margin-left: 312px;
+   display: grid;
+   // justify-content: center;
+   align-items: center;
+   margin-left: 312px;
  }
 
  .urbnstep {
-     font-size: 64px;
-     font-weight: bold;
+   font-size: 64px;
+   font-weight: bold;
+   color: white;
  }
 
  .yourStep {
-     font-size: 28px;
-     font-weight: bold;
+   font-size: 28px;
+   font-weight: bold;
+   color: white;
+
  }
 
  .topBoxBtn {
-     background-color: #c0FA73;
-     border-radius: 5px;
-     border: none;
-     height: 48px;
-     width: 115px;
-     font-size: 16px;
-     font-family: Noto Sans TC;
-     margin-top: 48px;
-     cursor: pointer;
+   background-color: #c0FA73;
+   border-radius: 5px;
+   border: none;
+   height: 48px;
+   width: 115px;
+   font-size: 16px;
+   font-family: Noto Sans TC;
+   margin-top: 48px;
+   cursor: pointer;
  }
 
  .topBoxBtn:hover {
-     color: #6C757D;
+   color: #6C757D;
  }
 
  .twoxtwoBox {
-     width: 100%;
-     background-color: white;
-     display: flex;
-     justify-content: center;
-     padding: 0 12px;
+   width: 100%;
+   background-color: white;
+   display: flex;
+   justify-content: center;
+   padding: 0 12px;
  }
 
  .twoxtwoBoxTopBox {
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     height: 108px;
-     margin: 30px 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 108px;
+   margin: 30px 0;
  }
 
  .newArrival {
-     font-size: 48px;
-     font-weight: bold;
+   font-size: 48px;
+   font-weight: bold;
  }
 
  .newitem {
-     font-size: 32px;
-     font-weight: bold;
+   font-size: 32px;
+   font-weight: bold;
  }
 
  .twoxtwoBoxContent {
-     width: 100%;
-     max-width: 1296px;
-     margin: 0 auto;
+   width: 100%;
+   max-width: 1296px;
+   margin: 0 auto;
  }
 
  .twoxtwoBoxPicture img {
-     width: 100%;
-     max-width: 636px;
-     height: auto;
-     object-fit: cover;
+   width: 100%;
+   max-width: 636px;
+   height: auto;
+   object-fit: cover;
  }
 
  .twoxtwoBoxPicture {
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     gap: 20px;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
  }
 
  .productTitle {
-     font-size: 20px;
+   font-size: 20px;
  }
 
  .fourBox {
-     width: 100%;
-     display: block;
-     padding: 40px 12px;
-     //不確定是否上下40px
+   width: 100%;
+   display: block;
+   padding: 40px 12px;
+   //不確定是否上下40px
 
  }
 
  .fourBoxContent {
-     width: 100%;
-     max-width: 1296px;
-     height: auto;
-     margin: 0 auto;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
+   width: 100%;
+   max-width: 1296px;
+   height: auto;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
  }
 
  .fourBoxPics {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     gap: 24px;
-     height: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 24px;
+   height: 100%;
  }
 
  .fourBoxPic {
-     position: relative;
-     width: 306px;
-     height: 100%;
+   position: relative;
+   width: 306px;
+   height: 100%;
  }
 
  .fourBoxPic img {
-     display: block;
-     width: 100%;
-     height: 100%;
+   display: block;
+   width: 100%;
+   height: 100%;
  }
 
  .no1 {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 91px;
-     height: 37px;
-     background-color: #E8FEC5;
-     color: #477A11;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-size: 14px;
-     font-family: Noto Sans TC;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 91px;
+   height: 37px;
+   background-color: #E8FEC5;
+   color: #477A11;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 14px;
+   font-family: Noto Sans TC;
  }
 
  .bottomBanner {
-     width: 100%;
-     max-width: 1920px;
-     height: 566px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+   width: 100%;
+   max-width: 1920px;
+   height: 566px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
  .bottomBannerPic {
-     position: relative;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
  }
 
  .bottomBannerPic img {
-     display: block;
-     max-width: 100%;
-     height: auto;
+   display: block;
+   max-width: 100%;
+   height: auto;
  }
 
  .bottomBannerText {
-     position: absolute;
-     color: white;
-     text-align: center;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
+   position: absolute;
+   color: white;
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 
  }
 
  .urbnstep span {
-     color: #C0FA73;
-     font-size: 40px;
+   color: #C0FA73;
+   font-size: 40px;
 
  }
 
  .urbnstep ul {
-     display: flex;
-     list-style: none;
-     gap: 24px;
+   display: flex;
+   list-style: none;
+   gap: 24px;
 
  }
 
  .graytext {
-     color: #ADB5BD;
+   color: #ADB5BD;
  }
 
  .grayhover {
-     width: 100%;
-     max-width: 636px;
-     height: 100%;
-     max-height: 636px;
-     position: absolute;
-     top: 0;
-     left: 0;
-     background-color: rgba(108, 117, 125, 0.4);
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     color: white;
+   width: 100%;
+   max-width: 636px;
+   height: 100%;
+   max-height: 636px;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(108, 117, 125, 0.4);
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   color: white;
  }
 
  h2 {
-     font-size: 32px;
-     margin-bottom: 16px;
+   font-size: 32px;
+   margin-bottom: 16px;
  }
 
  .puzzle {
-     width: 100%;
-     max-width: 1920px;
-     height: 826px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     padding: 64px 12px;
+   width: 100%;
+   max-width: 1920px;
+   height: 826px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 64px 12px;
  }
 
  .puzzleAndText {
-     width: 100%;
-     max-width: 1296px;
-     height: 698px;
-     display: flex;
-     flex-direction: column;
-     margin: 0 auto;
+   width: 100%;
+   max-width: 1296px;
+   height: 698px;
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
  }
 
  .puzzleContent {
-     display: grid;
-     grid-template-columns: repeat(6, 1fr);
-     grid-template-rows: repeat(3, 1fr);
-     gap: 8px;
-     width: 100%;
-     height: 644px;
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   gap: 8px;
+   width: 100%;
+   height: 644px;
  }
 
  .puzzleContent img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
  }
 
  .pic1 {
-     grid-column: 1;
-     grid-row: 1;
+   grid-column: 1;
+   grid-row: 1;
  }
 
  .pic2 {
-     grid-column: 2;
-     grid-row: 1;
+   grid-column: 2;
+   grid-row: 1;
  }
 
  .pic3 {
-     grid-column: 1 / 3;
-     grid-row: 2 / 4;
+   grid-column: 1 / 3;
+   grid-row: 2 / 4;
  }
 
  /* 左下大圖 */
  .pic4 {
-     grid-column: 3;
-     grid-row: 1;
+   grid-column: 3;
+   grid-row: 1;
  }
 
  .pic5 {
-     grid-column: 4;
-     grid-row: 1;
+   grid-column: 4;
+   grid-row: 1;
  }
 
  .pic6 {
-     grid-column: 3;
-     grid-row: 2;
+   grid-column: 3;
+   grid-row: 2;
  }
 
  .pic7 {
-     grid-column: 4;
-     grid-row: 2;
+   grid-column: 4;
+   grid-row: 2;
  }
 
  .pic8 {
-     grid-column: 3;
-     grid-row: 3;
+   grid-column: 3;
+   grid-row: 3;
  }
 
  .pic9 {
-     grid-column: 4;
-     grid-row: 3;
+   grid-column: 4;
+   grid-row: 3;
  }
 
  .pic10 {
-     grid-column: 5 / 7;
-     grid-row: 1 / 3;
+   grid-column: 5 / 7;
+   grid-row: 1 / 3;
  }
 
  /* 右上大圖 */
  .pic11 {
-     grid-column: 5;
-     grid-row: 3;
+   grid-column: 5;
+   grid-row: 3;
  }
 
  .pic12 {
-     grid-column: 6;
-     grid-row: 3;
+   grid-column: 6;
+   grid-row: 3;
  }
 
 
 
 
  @media (max-width: 1000px) {
-     nav {
-         height: 120px;
-     }
+   nav {
+     height: 120px;
+   }
 
-     .topBox {
-         width: 100%;
-         max-width: 1920px;
-         height: 480px;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-sm.png?raw=true');
-         background-size: cover;
-         background-position: center;
-     }
+   .topBox {
+     width: 100%;
+     max-width: 1920px;
+     height: 480px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-sm.png?raw=true');
+     background-size: cover;
+     background-position: center;
+   }
 
-     .topBoxContent {
+   .topBoxContent {
 
-         width: 100%;
-         height: auto;
-         display: grid;
-         gap: 8px;
-         align-items: center;
-         margin-left: 0;
-         padding: 0 24px;
-     }
+     width: 100%;
+     height: auto;
+     display: grid;
+     gap: 8px;
+     align-items: center;
+     margin-left: 0;
+     padding: 0 24px;
+   }
 
-     .yourStep {
-         font-size: 20px;
-     }
+   .yourStep {
+     font-size: 20px;
+   }
 
-     .urbnstep {
-         font-size: 48px;
-     }
+   .urbnstep {
+     font-size: 48px;
+   }
 
-     .topBoxBtn {
-         margin-top: 32px;
-     }
+   .topBoxBtn {
+     margin-top: 32px;
+   }
 
-     .newArrival {
-         font-size: 32px;
-     }
+   .newArrival {
+     font-size: 32px;
+   }
 
-     .newitem {
-         font-size: 24px;
-     }
+   .newitem {
+     font-size: 24px;
+   }
 
-     //
-     .fourBox.hotSales .fourBoxPics {
-         display: flex;
-         overflow-x: auto;
-         /* 允許橫向滾動 */
-         overflow-y: hidden;
-         gap: 16px;
-         /* 讓滑動更順暢 */
+   //
+   .fourBox.hotSales .fourBoxPics {
+     display: flex;
+     overflow-x: auto;
+     /* 允許橫向滾動 */
+     overflow-y: hidden;
+     gap: 16px;
+     /* 讓滑動更順暢 */
 
-         scroll-snap-type: x mandatory;
-         /* 可選:滑動時會自動對齊 */
-     }
+     scroll-snap-type: x mandatory;
+     /* 可選:滑動時會自動對齊 */
+   }
 
-     .fourBox.hotSales .fourBoxPic {
-         flex-shrink: 0;
-         /* 防止圖片縮小 */
-         width: 300px;
+   .fourBox.hotSales .fourBoxPic {
+     flex-shrink: 0;
+     /* 防止圖片縮小 */
+     width: 300px;
 
-         scroll-snap-align: start;
-         /* 配合 scroll-snap 使用 */
-     }
+     scroll-snap-align: start;
+     /* 配合 scroll-snap 使用 */
+   }
 
-     //bottombanner RWD
-     .bottomBanner {
-         width: 100%;
-         max-width: 1920px;
-         height: auto;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-     }
+   //bottombanner RWD
+   .bottomBanner {
+     width: 100%;
+     max-width: 1920px;
+     height: auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
 
-     .bottomBannerPic {
-         position: relative;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-     }
+   .bottomBannerPic {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
 
-     .bottomBannerPic img {
-         display: block;
-         max-width: 100%;
-         height: auto;
-     }
+   .bottomBannerPic img {
+     display: block;
+     max-width: 100%;
+     height: auto;
+   }
 
-     .bottomBannerText {
-         position: absolute;
-         color: white;
-         text-align: center;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         padding: 64px 12px;
+   .bottomBannerText {
+     position: absolute;
+     color: white;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 64px 12px;
 
-     }
+   }
 
-     .urbnstep ul {
+   .urbnstep ul {
 
-         list-style: none;
-         gap: 24px;
+     list-style: none;
+     gap: 24px;
 
-     }
+   }
 
-     //bottombanner RWD
-     //
+   //bottombanner RWD
+   //
 
-     .fourBox.series .fourBoxPics {
-         display: grid;
-         grid-template-columns: repeat(2, 1fr);
-         grid-template-rows: repeat(2, 1fr);
-         gap: 12px;
-     }
+   .fourBox.series .fourBoxPics {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(2, 1fr);
+     gap: 12px;
+   }
 
-     .fourBox.series .fourBoxPic {
-         width: 100%;
-         height: auto;
-     }
+   .fourBox.series .fourBoxPic {
+     width: 100%;
+     height: auto;
+   }
 
-     .fourBox.series .fourBoxPic img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-     }
+   .fourBox.series .fourBoxPic img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+   }
 
-     h2 {
-         font-size: 24px;
+   h2 {
+     font-size: 24px;
 
-     }
+   }
  }
