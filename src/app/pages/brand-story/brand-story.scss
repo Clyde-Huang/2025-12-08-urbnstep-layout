@@ -1,9 +1,5 @@
 @use '../../../styles/mixins' as *;
 
-
-
-
-
 .topPic {
   background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week1/hero.png?raw=true');
   background-size: cover;
@@ -11,12 +7,9 @@
   width: 100%;
   max-width: 1920px;
   height: 400px;
-  // display: flex;
-  // align-items: center;
   @include center-flex;
   flex-direction: column;
   gap: 16px;
-
 }
 
 .brandStoryzh {
@@ -33,13 +26,11 @@
 }
 
 .midBox {
-  padding: 64px 422px;
+  padding: 64px 422px 48px 422px;
   @include center-flex;
   flex-direction: column;
   gap: 48px;
 }
-
-
 
 .greenBox {
   width: 100%;
@@ -61,9 +52,7 @@
   color: #212529;
   font-size: 16px;
   text-align: center;
-
 }
-
 
 .introductionBoxTitle {
   font-size: 24px;
@@ -75,36 +64,26 @@
 .introductionBoxPic img {
   width: 100%;
   max-width: 1076px;
-  height: 100%;
-
-}
-
-
-
-.introductionBoxContentBox {
-
-  // padding: 0 110px 0px 110px;
+  // height: 100%;
 }
 
 .introductionBoxContentBox {
-
   width: 100%;
   max-width: 856px;
-  height: 269px;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding-bottom: 24px; // 給底線留出空間
 }
 
 .forBorderBottom {
   border-bottom: 1px solid #CED4DA;
-
+  padding-bottom: 48px;
 }
 
 .introductionBox {
   width: 100%;
   max-width: 1076px;
-  height: 1090px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -120,23 +99,24 @@
 
 .introductionBoxContent2 {
   font-size: 16px;
-  // font-weight: 400;
-  // letter-spacing: 5%;
-  // line-height: 150%;
 }
 
-
-
-.courseBox {
-  padding: 0 532px;
-  height: 197px;
+.courseBox,
+.conceptBox,
+.storyBox {
+  // padding: 0 532px;
+  max-width: 856px;
+  width: 100%;
+  max-height: 197px;
+  align-items: start;
   display: flex;
-
   flex-direction: column;
   gap: 24px;
 }
 
-.courseBoxTitle {
+.courseBoxTitle,
+.conceptBoxTitle,
+.storyBoxTitle {
   font-size: 24px;
   font-weight: bold;
 }
@@ -149,11 +129,41 @@
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  padding-left: 24px; //不知道要擠多少
+  padding-left: 24px; //硬擠
   gap: 12px;
 }
 
+.conceptBoxUl ul,
+.storyBoxUl ul {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
 
+}
+
+.conceptBoxUl ul li {
+  border-left: 3px solid #DEE2E6;
+  padding: 0 12px;
+}
+
+.bottomBox {
+  @include center-flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.storyBoxUl span {
+  margin: 0 8px 0 0;
+  color: #57A203;
+  font-size: 15px;
+}
+
+.storyBoxUl ul li {
+  color: #57A203;
+  font-size: 16px;
+}
 
 @media (max-width: 1250px) {
   .topPic {
@@ -163,10 +173,7 @@
     width: 100%;
     max-width: 1920px;
     height: 240px;
-    // display: flex;
-    // align-items: center;
     gap: 8px;
-
   }
 
   .brandStoryzh {
@@ -189,57 +196,60 @@
 
   .greenBoxTxet1 {
     text-align: start;
-
   }
 
   .greenBoxTxet2 {
     color: #212529;
     font-size: 16px;
     text-align: start;
-
   }
 
   .introductionBox {
     gap: 16px;
-    height: 819px;
   }
 
   .introductionBoxPic img {
-    padding: 0 12px;
+    padding: 0;
   }
 
   .introductionBoxTitle,
-  .courseBoxTitle {
+  .courseBoxTitle,
+  .conceptBoxTitle,
+  .storyBoxTitle {
     font-size: 20px;
     font-weight: bold;
 
   }
 
-  .introductionBoxTitle,
-  .introductionBoxContentBox {
+  // .introductionBoxTitle {
+  //   //
+  //   padding: 0;
+  // }
 
-    padding: 0;
-    margin-bottom: 0;
+  .introductionBoxContentBox {
+    padding: 0 0px 16px 0px; // 加上左右 padding 並保持底部空間
   }
 
+  .forBorderBottom {
+    padding-bottom: 32px; // 小螢幕時調整底線與內容的距離
+  }
 
   .introductionBoxContent1 {
     font-size: 16px;
-
   }
 
-  .courseBoxTitle {
-    font-size: 20px;
-    font-weight: bold;
-  }
-
-
-  .courseBox {
-    padding: 12px;
-    height: 240px;
+  .courseBox,
+  .conceptBox,
+  .storyBox {
+    padding: 0 12px 32px 12px;
     display: flex;
-
     flex-direction: column;
     gap: 16px;
+  }
+
+  .bottomBox {
+    @include center-flex;
+    flex-direction: column;
+    gap: 32px;
   }
 }
