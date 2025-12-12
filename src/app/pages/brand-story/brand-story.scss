@@ -1,0 +1,255 @@
+@use '../../../styles/mixins' as *;
+
+.topPic {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week1/hero.png?raw=true');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1920px;
+  height: 400px;
+  @include center-flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brandStoryzh {
+  font-size: 40px;
+}
+
+.brandStoryen {
+  font-size: 28px;
+}
+
+.brandStoryzh,
+.brandStoryen {
+  color: white;
+}
+
+.midBox {
+  padding: 64px 422px 48px 422px;
+  @include center-flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.greenBox {
+  width: 100%;
+  max-width: 865px;
+  height: 180px;
+  background-color: #F5FEE7;
+  @include center-flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.greenBoxTxet1 {
+  color: #57A203;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.greenBoxTxet2 {
+  color: #212529;
+  font-size: 16px;
+  text-align: center;
+}
+
+.introductionBoxTitle {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 110px;
+  align-self: start;
+}
+
+.introductionBoxPic img {
+  width: 100%;
+  max-width: 1076px;
+  // height: 100%;
+}
+
+.introductionBoxContentBox {
+  width: 100%;
+  max-width: 856px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-bottom: 24px; // 給底線留出空間
+}
+
+.forBorderBottom {
+  border-bottom: 1px solid #CED4DA;
+  padding-bottom: 48px;
+}
+
+.introductionBox {
+  width: 100%;
+  max-width: 1076px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.introductionBoxContent1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #57A203;
+  text-align: start;
+}
+
+.introductionBoxContent2 {
+  font-size: 16px;
+}
+
+.courseBox,
+.conceptBox,
+.storyBox {
+  // padding: 0 532px;
+  max-width: 856px;
+  width: 100%;
+  max-height: 197px;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.courseBoxTitle,
+.conceptBoxTitle,
+.storyBoxTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.courseBoxUl span {
+  margin: 0 8px;
+}
+
+.courseBoxUl ul {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px; //硬擠
+  gap: 12px;
+}
+
+.conceptBoxUl ul,
+.storyBoxUl ul {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+
+}
+
+.conceptBoxUl ul li {
+  border-left: 3px solid #DEE2E6;
+  padding: 0 12px;
+}
+
+.bottomBox {
+  @include center-flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.storyBoxUl span {
+  margin: 0 8px 0 0;
+  color: #57A203;
+  font-size: 15px;
+}
+
+.storyBoxUl ul li {
+  color: #57A203;
+  font-size: 16px;
+}
+
+@media (max-width: 1250px) {
+  .topPic {
+    background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/hero-sm.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 1920px;
+    height: 240px;
+    gap: 8px;
+  }
+
+  .brandStoryzh {
+    font-size: 28px;
+  }
+
+  .brandStoryen {
+    font-size: 20px;
+  }
+
+  .midBox {
+    padding: 32px 12px;
+    gap: 32px;
+  }
+
+  .greenBox {
+    height: 260px;
+    padding: 24px;
+  }
+
+  .greenBoxTxet1 {
+    text-align: start;
+  }
+
+  .greenBoxTxet2 {
+    color: #212529;
+    font-size: 16px;
+    text-align: start;
+  }
+
+  .introductionBox {
+    gap: 16px;
+  }
+
+  .introductionBoxPic img {
+    padding: 0;
+  }
+
+  .introductionBoxTitle,
+  .courseBoxTitle,
+  .conceptBoxTitle,
+  .storyBoxTitle {
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+
+  // .introductionBoxTitle {
+  //   //
+  //   padding: 0;
+  // }
+
+  .introductionBoxContentBox {
+    padding: 0 0px 16px 0px; // 加上左右 padding 並保持底部空間
+  }
+
+  .forBorderBottom {
+    padding-bottom: 32px; // 小螢幕時調整底線與內容的距離
+  }
+
+  .introductionBoxContent1 {
+    font-size: 16px;
+  }
+
+  .courseBox,
+  .conceptBox,
+  .storyBox {
+    padding: 0 12px 32px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .bottomBox {
+    @include center-flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+}
