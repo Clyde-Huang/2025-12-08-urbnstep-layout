@@ -5,102 +5,241 @@
 
 
 .topPic {
-    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week1/hero.png?raw=true');
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    max-width: 1920px;
-    height: 400px;
-    // display: flex;
-    // align-items: center;
-    @include center-flex;
-    flex-direction: column;
-    gap: 16px;
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week1/hero.png?raw=true');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1920px;
+  height: 400px;
+  // display: flex;
+  // align-items: center;
+  @include center-flex;
+  flex-direction: column;
+  gap: 16px;
 
 }
 
 .brandStoryzh {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 .brandStoryen {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 .brandStoryzh,
 .brandStoryen {
-    color: white;
+  color: white;
 }
 
 .midBox {
-    padding: 64px 0;
-    @include center-flex;
+  padding: 64px 422px;
+  @include center-flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 
 
 .greenBox {
-    width: 100%;
-    max-width: 865px;
-    height: 180px;
-    background-color: #F5FEE7;
-    @include center-flex;
-    flex-direction: column;
-    gap: 12px;
+  width: 100%;
+  max-width: 865px;
+  height: 180px;
+  background-color: #F5FEE7;
+  @include center-flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .greenBoxTxet1 {
-    color: #57A203;
-    font-size: 20px;
-    font-weight: bold;
+  color: #57A203;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .greenBoxTxet2 {
-    color: #212529;
-    font-size: 16px;
-    text-align: center;
+  color: #212529;
+  font-size: 16px;
+  text-align: center;
 
 }
 
-@media (max-width: 1000px) {
-    .topPic {
-        background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/hero-sm.png');
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        max-width: 1920px;
-        height: 240px;
-        // display: flex;
-        // align-items: center;
-        gap: 8px;
-    }
 
-    .brandStoryzh {
-        font-size: 28px;
-    }
+.introductionBoxTitle {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 0 110px;
+  align-self: start;
+}
 
-    .brandStoryen {
-        font-size: 20px;
-    }
+.introductionBoxPic img {
+  width: 100%;
+  max-width: 1076px;
+  height: 100%;
 
-    .midBox {
-        padding: 32px 12px;
-    }
+}
 
-    .greenBox {
-        height: 260px;
-        padding: 24px;
-    }
 
-    .greenBoxTxet1 {
-        text-align: start;
-    
-    }
 
-    .greenBoxTxet2 {
-        color: #212529;
-        font-size: 16px;
-        text-align: start;
+.introductionBoxContentBox {
 
-    }
+  // padding: 0 110px 0px 110px;
+}
+
+.introductionBoxContentBox {
+
+  width: 100%;
+  max-width: 856px;
+  height: 269px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.forBorderBottom {
+  border-bottom: 1px solid #CED4DA;
+
+}
+
+.introductionBox {
+  width: 100%;
+  max-width: 1076px;
+  height: 1090px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.introductionBoxContent1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #57A203;
+  text-align: start;
+}
+
+.introductionBoxContent2 {
+  font-size: 16px;
+  // font-weight: 400;
+  // letter-spacing: 5%;
+  // line-height: 150%;
+}
+
+
+
+.courseBox {
+  padding: 0 532px;
+  height: 197px;
+  display: flex;
+
+  flex-direction: column;
+  gap: 24px;
+}
+
+.courseBoxTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.courseBoxUl span {
+  margin: 0 8px;
+}
+
+.courseBoxUl ul {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px; //不知道要擠多少
+  gap: 12px;
+}
+
+
+
+@media (max-width: 1250px) {
+  .topPic {
+    background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/hero-sm.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 1920px;
+    height: 240px;
+    // display: flex;
+    // align-items: center;
+    gap: 8px;
+
+  }
+
+  .brandStoryzh {
+    font-size: 28px;
+  }
+
+  .brandStoryen {
+    font-size: 20px;
+  }
+
+  .midBox {
+    padding: 32px 12px;
+    gap: 32px;
+  }
+
+  .greenBox {
+    height: 260px;
+    padding: 24px;
+  }
+
+  .greenBoxTxet1 {
+    text-align: start;
+
+  }
+
+  .greenBoxTxet2 {
+    color: #212529;
+    font-size: 16px;
+    text-align: start;
+
+  }
+
+  .introductionBox {
+    gap: 16px;
+    height: 819px;
+  }
+
+  .introductionBoxPic img {
+    padding: 0 12px;
+  }
+
+  .introductionBoxTitle,
+  .courseBoxTitle {
+    font-size: 20px;
+    font-weight: bold;
+
+  }
+
+  .introductionBoxTitle,
+  .introductionBoxContentBox {
+
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+
+  .introductionBoxContent1 {
+    font-size: 16px;
+
+  }
+
+  .courseBoxTitle {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+
+  .courseBox {
+    padding: 12px;
+    height: 240px;
+    display: flex;
+
+    flex-direction: column;
+    gap: 16px;
+  }
 }
