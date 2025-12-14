@@ -36,19 +36,38 @@
    display: grid;
    // justify-content: center;
    align-items: center;
-   margin-left: 312px;
+   margin-left: 200px;
+
  }
 
  .urbnstep {
+   color: white;
    font-size: 64px;
    font-weight: bold;
-   color: white;
+ }
+
+
+ .urbnstep ul {
+   font-size: 48px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   list-style: none;
+   gap: 24px;
+   font-weight: 700;
+   font-style: bold;
+   line-height: 120%;
+   letter-spacing: 5%;
+   text-size-adjust: 100%;
+
+
  }
 
  .yourStep {
-   font-size: 28px;
+   font-size: 32px;
    font-weight: bold;
    color: white;
+   margin: 16px 0 0 0;
 
  }
 
@@ -59,9 +78,10 @@
    height: 48px;
    width: 115px;
    font-size: 16px;
-   font-family: Noto Sans TC;
+   font-weight: 500;
    margin-top: 48px;
    cursor: pointer;
+   padding: 12px 24px;
  }
 
  .topBoxBtn:hover {
@@ -167,32 +187,65 @@
    justify-content: center;
    align-items: center;
    font-size: 14px;
-   font-family: Noto Sans TC;
+
  }
 
  .bottomBanner {
    width: 100%;
    max-width: 1920px;
+
    height: 566px;
    display: flex;
    justify-content: center;
    align-items: center;
  }
 
+ //e
  .bottomBannerPic {
    position: relative;
+   width: 100%;
+   max-width: 1920px;
+   height: 470px;
    display: flex;
    justify-content: center;
    align-items: center;
+   overflow: hidden;
  }
 
  .bottomBannerPic img {
    display: block;
    max-width: 100%;
-   height: auto;
+   max-height: 100%;
+   object-fit: cover;
  }
 
+ .picStar {
+   position: absolute;
+   width: 48px;
+   height: 48px;
+   z-index: 10;
+
+   top: -32px;
+   left: -56px; //32+48/2
+
+ }
+
+ .picSp {
+   position: absolute;
+   width: 76px;
+   height: 64px;
+   z-index: 10;
+   bottom: 32px;
+   right: -38px;
+
+ }
+
+
  .bottomBannerText {
+   width: 100%;
+   max-width: 634px;
+   height: 100%;
+   max-height: 270px;
    position: absolute;
    color: white;
    text-align: center;
@@ -202,20 +255,26 @@
 
  }
 
- .urbnstep span {
+
+
+ .urbnstep ul li:nth-child(odd) {
+   color: white;
+
+ }
+
+ .urbnstep ul li:nth-child(even) {
+
+   font-size: 26px;
+
    color: #C0FA73;
-   font-size: 40px;
-
  }
 
- .urbnstep ul {
-   display: flex;
-   list-style: none;
-   gap: 24px;
 
- }
+
+
 
  .graytext {
+   font-size: 20px;
    color: #ADB5BD;
  }
 
@@ -273,6 +332,15 @@
    width: 100%;
    height: 100%;
    object-fit: cover;
+ }
+
+ .comma {
+   display: inline;
+   color: #ADB5BD;
+ }
+
+ .br {
+   display: none;
  }
 
  .pic1 {
@@ -340,7 +408,7 @@
 
 
 
- @media (max-width: 1000px) {
+ @media (max-width: 1200px) {
    nav {
      height: 120px;
    }
@@ -368,13 +436,16 @@
      padding: 0 24px;
    }
 
-   .yourStep {
-     font-size: 20px;
-   }
-
    .urbnstep {
      font-size: 48px;
    }
+
+   .yourStep {
+     font-size: 20px;
+     margin: 16px 0 0px 0;
+   }
+
+
 
    .topBoxBtn {
      margin-top: 32px;
@@ -425,12 +496,13 @@
      display: flex;
      justify-content: center;
      align-items: center;
+     height: 498px;
    }
 
    .bottomBannerPic img {
      display: block;
      max-width: 100%;
-     height: auto;
+     height: 450px;
    }
 
    .bottomBannerText {
@@ -440,14 +512,19 @@
      display: flex;
      flex-direction: column;
      align-items: center;
-     padding: 64px 12px;
+     width: auto;
+     height: auto;
+     max-height: none;
+     //  padding: 64px 12px;
+
 
    }
 
    .urbnstep ul {
 
      list-style: none;
-     gap: 24px;
+     gap: 8px;
+     flex-direction: column;
 
    }
 
@@ -476,4 +553,54 @@
      font-size: 24px;
 
    }
+
+   .urbnstep ul li:nth-child(odd) {
+     color: white;
+     font-size: 32px;
+
+   }
+
+   .urbnstep ul li:nth-child(even) {
+
+     font-size: 24px;
+     line-height: 120%;
+   }
+
+   .graytext {
+     width: 351px;
+     font-size: 16px;
+     font-weight: 400;
+     letter-spacing: 5%;
+   }
+
+   .comma {
+     display: none;
+
+   }
+
+   .br {
+     display: inline;
+   }
+
+   .picStar {
+
+     width: 39.29px !important;
+     height: 39.29px !important;
+     z-index: 10;
+
+     top: -36px;
+     left: -30.29px; //慢慢調
+
+   }
+
+   .picSp {
+
+     width: 76px !important;
+     height: 64px !important;
+     z-index: 10;
+     bottom: 32px;
+     right: -38px;
+
+   }
+
  }
