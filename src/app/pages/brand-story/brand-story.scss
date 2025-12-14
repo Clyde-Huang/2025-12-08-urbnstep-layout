@@ -138,9 +138,13 @@
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+
   list-style: none;
 
+}
+
+.conceptBoxUl ul {
+  gap: 12px;
 }
 
 .conceptBoxUl ul li {
@@ -154,16 +158,27 @@
   gap: 48px;
 }
 
-.storyBoxUl span {
-  margin: 0 8px 0 0;
-  color: #57A203;
-  font-size: 15px;
-}
-
 .storyBoxUl ul li {
   color: #57A203;
   font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  padding: 8px 0;
+
+
 }
+
+.storyBoxUl ul li span {
+
+  display: inline-block; //這樣改才沒底線
+  margin: 0 8px 0 0;
+  color: #57A203;
+  font-size: 20px; //可能是圖片
+  text-decoration: none
+}
+
+
 
 @media (max-width: 1250px) {
   .topPic {
@@ -227,11 +242,11 @@
   // }
 
   .introductionBoxContentBox {
-    padding: 0 0px 16px 0px; // 加上左右 padding 並保持底部空間
+    padding: 0 0px 16px 0px;
   }
 
   .forBorderBottom {
-    padding-bottom: 32px; // 小螢幕時調整底線與內容的距離
+    padding-bottom: 32px;
   }
 
   .introductionBoxContent1 {
@@ -245,6 +260,10 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  .courseBox {
+    max-height: 240px
   }
 
   .bottomBox {
