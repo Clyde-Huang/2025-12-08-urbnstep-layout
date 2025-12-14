@@ -603,4 +603,30 @@
 
    }
 
+   .puzzle {
+     height: auto;
+     padding: 40px 12px;
+   }
+
+   .puzzleAndText {
+     height: auto;
+   }
+
+   .puzzleContent {
+     display: flex;
+     overflow-x: auto;
+     /* 允許橫向滾動 */
+     overflow-y: hidden;
+     gap: 16px;
+     /* 讓滑動更順暢 */
+     height: auto;
+     scroll-snap-type: x mandatory;
+     /* 可選:滑動時會自動對齊 */
+   }
+
+   .puzzleContent img {
+     width: 300px;
+     height: 300px;
+     object-fit: cover;
+   }
  }
