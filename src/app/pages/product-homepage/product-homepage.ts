@@ -3,6 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { Nav } from '../nav/nav';
 import { Footer } from '../footer/footer';
 import { ProductService } from '../../@services/product.service';
+import { RouterModule } from '@angular/router';
+
 
 interface Product {
   圖片: string;
@@ -15,7 +17,7 @@ interface Product {
 
 @Component({
   selector: 'app-product-homepage',
-  imports: [Nav, Footer, FormsModule],
+  imports: [Nav, Footer, FormsModule, RouterModule],
   templateUrl: './product-homepage.html',
   styleUrl: './product-homepage.scss',
 })
