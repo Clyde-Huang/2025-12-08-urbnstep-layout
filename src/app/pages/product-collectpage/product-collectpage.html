@@ -1,65 +1,104 @@
 <main>
-
     <nav>
         <app-nav></app-nav>
     </nav>
 
     <section class="box">
         <section class="leftBox">
-            <img src="#" alt="尚未有圖片1" class="imgShow">
-            <img src="#" alt="尚未有圖片" class="imgHide">
-            <img src="#" alt="尚未有圖片" class="imgHide">
-            <img src="#" alt="尚未有圖片" class="imgHide">
-            <img src="#" alt="尚未有圖片" class="imgHide">
-            <img src="#" alt="尚未有圖片" class="imgHide">
-            <img src="#" alt="尚未有圖片" class="imgHide">
-            <img src="#" alt="尚未有圖片" class="imgHide">
+            <img [src]="product?.['圖片'] || ''" [alt]="product?.['名稱'] || '商品圖片'" class="imgShow">
+            <img src="" alt="尚未有圖片" class="imgHide">
+            <img src="" alt="尚未有圖片" class="imgHide">
+            <img src="" alt="尚未有圖片" class="imgHide">
+            <img src="" alt="尚未有圖片" class="imgHide">
+            <img src="" alt="尚未有圖片" class="imgHide">
+            <img src="" alt="尚未有圖片" class="imgHide">
+            <img src="" alt="尚未有圖片" class="imgHide">
         </section>
 
-
         <section class="rightBox">
-            <!-- 都用margin推 -->
             <div class="rightBoxTop">
                 <div class="rightBoxTopNav">
                     首頁 / 女鞋
                 </div>
                 <div class="rightBoxTopProduct">
-                    <div class="rightBoxTopProductName"> {{名稱}}</div>
-                    <div class="rightBoxTopProductPrice">NT${{價格}}</div>
-
+                    <div class="rightBoxTopProductName">{{ product?.['名稱'] || '商品名稱' }}</div>
+                    <div class="rightBoxTopProductPrice">NT${{ product?.['價格'] || 0 }}</div>
                 </div>
 
                 <div class="rightBoxTopTextBox">
-                    <div class="rightBoxTopTextBox1">本產品以柔和為底，搭配皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。
+                    <!-- 假資料 -->
+                    <div class="rightBoxTopTextBox1">
+                        本產品以柔和為底,搭配皮革點綴,走在街上自帶回頭率。鞋型採用復古運動風輪廓,結合輕量厚底與柔軟泡棉鞋舌,兼顧美感與舒適。
                     </div>
                     <div class="rightBoxTopTextBox2">
-                        鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。</div>
+                        鞋身選用柔軟皮革材質,打造出清新卻不失個性的氛圍,並以鞋面透氣孔設計提升穿著體驗,兼顧質感與舒適度,適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。
+                    </div>
                 </div>
-
-
             </div>
-
 
             <div class="rightBoxMid">
                 <div class="rightBoxMidColor">
-                    <!-- @for -->
-                    顏色:{{}}
+                    顏色: {{ product?.['顏色'] || '未選擇' }}
                 </div>
 
-                <div class="rightBoxMidSize"></div>
                 <div class="rightBoxMidSizeText">尺寸</div>
-                <!-- @for -->
-                <div class="rightBoxMidSizeOptions"></div>
-                <!-- @for -->
-                <div class="rightBoxMidSizeQuantity">僅剩{{數量}}雙</div>
 
+                <div class="rightBoxMidSizeOptions">
+                    @for (option of sizeOptions; track option.size) {
+                    <button class="sizeButton" [class.selected]="selectedSize === option.size"
+                        [class.outOfStock]="!hasStock(option.stock)" [disabled]="!hasStock(option.stock)"
+                        (click)="selectSize(option.size)">
+                        {{ option.size }}
+                    </button>
+                    }
+                </div>
+
+                @if (selectedSize && getSelectedStock() > 0) {
+                <div class="rightBoxMidSizeQuantity">
+                    僅剩{{ getSelectedStock() }}雙
+                </div>
+                }
+
+                <div class="reservation">
+                    <div class="reservationAdd"><span class="material-symbols-outlined">
+                            favorite
+                        </span>加入收藏</div>
+                    <div class="reservationTry"><span class="material-symbols-outlined icon-white">
+                            work_history
+                        </span>預約門市試穿</div>
+                    <div class="reservationIcon"><span class="material-symbols-outlined">
+                            favorite
+                        </span></div>
+                </div>
             </div>
 
+            <div class="rightBoxBot">
+                <div class="rightBoxBot1">
+                    <!-- 假資料 -->
+                    <div class="rightBoxBotTitle">商品材質</div>
+                    <div class="rightBoxBotContent">
+                        鞋面：合成皮革（Synthetic Leather）<br>
+                        內裡：透氣網布材質，提升舒適與排汗性<br>
+                        鞋底：EVA 輕量發泡橡膠，具備良好緩震與止滑效果<br>
+                        鞋帶：聚酯纖維，耐拉扯不易鬆脫</div>
+                </div>
+                <div class="rightBoxBot1">
+                    <div class="rightBoxBotTitle">購買須知</div>
+                    <div class="rightBoxBotContent">商品顏色因螢幕顯示可能略有差異，請以實品為準。<br>
+                        建議首次穿著前試穿確認尺寸，避免影響退換貨權益。<br>
+                        本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。</div>
+                </div>
+                <div class="rightBoxBot1">
+                    <div class="rightBoxBotTitle">保養方式</div>
+                    <div class="rightBoxBotContent">建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。<br>
+                        收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。<br>
+                        若需深層清潔，建議使用中性清潔劑並搭配柔刷輕刷，勿使用漂白水或強酸強鹼清潔劑。</div>
+                </div>
+
+            </div>
+            <!-- '你可能也喜歡'不做了，目前這頁是綁指定條件過來，用全部遍利可能會有問題 -->
         </section>
-
-
     </section>
-
 
     <footer>
         <app-footer></app-footer>

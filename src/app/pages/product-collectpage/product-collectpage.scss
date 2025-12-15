@@ -1,13 +1,14 @@
 @use '../../../styles/mixins' as m;
 
 .box {
-    max-width: 1920;
+    max-width: 1920px;
     width: 100%;
     height: 1628px;
     padding: 64px 12px;
-    @include m.center-flex;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 24px;
-
 }
 
 .leftBox {
@@ -22,61 +23,25 @@
     width: 369px;
     height: 369px;
     background-color: #f0f3f7;
-
 }
 
-@media(max-width:1200px) {
-    .box {
-        width: 100%;
-        height: auto;
-        padding: 0;
-        flex-direction: column;
-        align-items: flex-start; // 加這行！讓內容靠上
-        justify-self: center;
-    }
-
-    .leftBox {
-
-        width: 100%;
-        height: 375px;
-        display: flex;
-        justify-content: center;
-
-
-    }
-
-    .leftBox img {
-        width: 375px;
-        height: 375px;
-        // display: block;
-        padding: 0;
-    }
-
-    .imgHide {
-        display: none;
-    }
-}
-
-//
 .rightBox {
-    // width: 100%;
     width: 526px;
     height: auto;
     display: flex;
-    // justify-content: center;
-    align-self: start;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 32px;
 }
 
 .rightBoxTopNav {
     color: #6C757D;
-
 }
 
-
 .rightBoxTopTextBox {
-    @include m.center-flex;
+    display: flex;
     flex-direction: column;
+    align-self: flex-start;
     gap: 12px;
 }
 
@@ -89,12 +54,178 @@
     font-size: 16px;
 }
 
+rightBoxMid {
+    width: 526px;
+    height: auto;
+}
+
+// 尺寸選項 Grid 佈局 - 每行3格
+.rightBoxMidSizeOptions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.sizeButton {
+    width: 160px;
+    height: 48px;
+    padding: 12px 24px;
+    border: 1px solid #DEE2E6;
+    background-color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.5s ease;
+    border-radius: 4px;
+    // box-sizing: border-box;
+
+    &:hover:not(:disabled) {
+        border-color: #333;
+        background-color: #d1d1d1;
+    }
+
+    &.selected {
+        border-color: #333;
+        background-color: #333;
+        color: white;
+    }
+
+    &.outOfStock {
+        border-color: #DEE2E6;
+        background-color: white;
+        color: #999;
+        cursor: not-allowed;
+        // text-decoration: line-through;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.rightBoxMidSizeText {
+    font-size: 16px;
+
+    // margin-bottom: 8px;
+}
+
+.rightBoxMidSizeQuantity {
+    font-size: 14px;
+    color: #D74F4F;
+
+    // margin-top: 8px;
+}
+
+.rightBoxTopProductName {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.rightBoxTopProductPrice {
+    color: #57A203;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reservation {
+    @include m.center-flex;
+    justify-content: space-between;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.reservationAdd {
+    border-radius: 4px;
+    border: 1px solid #212529;
+}
+
+.reservationTry {
+    border-radius: 4px;
+    color: white;
+    background-color: #212529;
+}
+
+.reservationAdd,
+.reservationTry {
+    width: 259px;
+    height: 48px;
+    line-height: 150%;
+    letter-spacing: 5%;
+    @include m.center-flex;
+    gap: 8px;
+}
+
+.reservationIcon {
+    width: 48px;
+    height: 48px;
+    display: none;
+}
+
+.icon-white {
+    color: white;
+    /* 或者使用精確的十六進位碼: #FFFFFF */
+}
+
+.rightBoxBotTitle {
+    font-weight: 500;
+}
+.rightBoxBotContent{
+    color: #6C757D;
+}
+
 @media(max-width:1200px) {
-    .rightBox {
-        padding: 0 12px;
+    .box {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-self: center;
+    }
+
+    .leftBox {
+        width: 100%;
+        height: 375px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .leftBox img {
+        width: 375px;
+        height: 375px;
+        padding: 0;
+    }
+
+    .imgHide {
+        display: none;
     }
 
     .rightBox {
         width: 100%;
+        padding: 0 12px;
     }
+
+    .rightBoxMidSizeOptions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rightBoxTopProductName {
+        font-size: 24px;
+
+    }
+
+    .rightBoxTopProductPrice {
+
+        font-size: 16px;
+
+    }
+
+    .reservationAdd {
+        display: none;
+    }
+
+    .reservationIcon {
+        @include m.center-flex
+    }
+
 }

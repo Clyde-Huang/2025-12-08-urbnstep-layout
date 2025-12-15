@@ -29,13 +29,13 @@
             <div class="productGrid">
                 @if (filteredProducts.length === 0) {
                 <div class="noResults">
-                    <p>重新載入，或點選分類!</p>
+                    <p>重新載入,或點選分類!</p>
                 </div>
                 }
 
                 @for (product of filteredProducts; track $index) {
-                <div class="listContent" [class.hide-on-desktop]="$index === 9">
-                    <a routerLink="/ProductCollectpage"><img [src]="product['圖片']" [alt]="product['名稱']"></a>
+                <div class="listContent" [class.hide-on-desktop]="$index === 9" (click)="goToProductDetail(product)">
+                    <img [src]="product['圖片']" [alt]="product['名稱']">
                     <div class="title">{{ product['名稱'] }}</div>
                     <div class="price">NT$ {{ product['價格'] }}</div>
                 </div>

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 import { Nav } from '../nav/nav';
 import { Footer } from '../footer/footer';
 import { ProductService } from '../../@services/product.service';
-import { RouterModule } from '@angular/router';
-
 
 interface Product {
   圖片: string;
@@ -27,7 +26,10 @@ export class ProductHomepage implements OnInit {
   searchText: string = '';
   selectedCategory: string = '所有商品';
 
-  constructor(private productService: ProductService) { }
+  constructor(
+    private productService: ProductService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe({
@@ -42,7 +44,7 @@ export class ProductHomepage implements OnInit {
     });
   }
 
-  // 搜尋功能（名稱模糊搜尋 + 類別篩選）
+  // 搜尋功能(名稱模糊搜尋 + 類別篩選)
   onSearch(): void {
     const searchLower = this.searchText.toLowerCase().trim();
 
@@ -63,5 +65,12 @@ export class ProductHomepage implements OnInit {
   filterByCategory(category: string): void {
     this.selectedCategory = category;
     this.onSearch();
+  }
+
+  // 導航到商品詳情頁並傳遞資料
+  goToProductDetail(product: Product): void {
+    this.router.navigate(['/ProductCollectpage'], {
+      state: { product: product }
+    });
   }
 }
