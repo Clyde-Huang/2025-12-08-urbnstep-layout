@@ -1,1 +1,67 @@
-<p>product-collectpage works!</p>
+<main>
+
+    <nav>
+        <app-nav></app-nav>
+    </nav>
+
+    <section class="box">
+        <section class="leftBox">
+            <img src="#" alt="尚未有圖片1" class="imgShow">
+            <img src="#" alt="尚未有圖片" class="imgHide">
+            <img src="#" alt="尚未有圖片" class="imgHide">
+            <img src="#" alt="尚未有圖片" class="imgHide">
+            <img src="#" alt="尚未有圖片" class="imgHide">
+            <img src="#" alt="尚未有圖片" class="imgHide">
+            <img src="#" alt="尚未有圖片" class="imgHide">
+            <img src="#" alt="尚未有圖片" class="imgHide">
+        </section>
+
+
+        <section class="rightBox">
+            <!-- 都用margin推 -->
+            <div class="rightBoxTop">
+                <div class="rightBoxTopNav">
+                    首頁 / 女鞋
+                </div>
+                <div class="rightBoxTopProduct">
+                    <div class="rightBoxTopProductName"> {{名稱}}</div>
+                    <div class="rightBoxTopProductPrice">NT${{價格}}</div>
+
+                </div>
+
+                <div class="rightBoxTopTextBox">
+                    <div class="rightBoxTopTextBox1">本產品以柔和為底，搭配皮革點綴，走在街上自帶回頭率。鞋型採用復古運動風輪廓，結合輕量厚底與柔軟泡棉鞋舌，兼顧美感與舒適。
+                    </div>
+                    <div class="rightBoxTopTextBox2">
+                        鞋身選用柔軟皮革材質，打造出清新卻不失個性的氛圍，並以鞋面透氣孔設計提升穿著體驗，兼顧質感與舒適度，適合日常長時間著用。無論是街頭穿搭、日常通勤或週末出遊都能輕鬆駕馭。</div>
+                </div>
+
+
+            </div>
+
+
+            <div class="rightBoxMid">
+                <div class="rightBoxMidColor">
+                    <!-- @for -->
+                    顏色:{{}}
+                </div>
+
+                <div class="rightBoxMidSize"></div>
+                <div class="rightBoxMidSizeText">尺寸</div>
+                <!-- @for -->
+                <div class="rightBoxMidSizeOptions"></div>
+                <!-- @for -->
+                <div class="rightBoxMidSizeQuantity">僅剩{{數量}}雙</div>
+
+            </div>
+
+        </section>
+
+
+    </section>
+
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</main>

@@ -1,0 +1,100 @@
+@use '../../../styles/mixins' as m;
+
+.box {
+    max-width: 1920;
+    width: 100%;
+    height: 1628px;
+    padding: 64px 12px;
+    @include m.center-flex;
+    gap: 24px;
+
+}
+
+.leftBox {
+    width: 746px;
+    height: 1500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.leftBox img {
+    width: 369px;
+    height: 369px;
+    background-color: #f0f3f7;
+
+}
+
+@media(max-width:1200px) {
+    .box {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start; // 加這行！讓內容靠上
+        justify-self: center;
+    }
+
+    .leftBox {
+
+        width: 100%;
+        height: 375px;
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    .leftBox img {
+        width: 375px;
+        height: 375px;
+        // display: block;
+        padding: 0;
+    }
+
+    .imgHide {
+        display: none;
+    }
+}
+
+//
+.rightBox {
+    // width: 100%;
+    width: 526px;
+    height: auto;
+    display: flex;
+    // justify-content: center;
+    align-self: start;
+    gap: 32px;
+}
+
+.rightBoxTopNav {
+    color: #6C757D;
+
+}
+
+
+.rightBoxTopTextBox {
+    @include m.center-flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.rightBoxTopProduct {
+    margin: 12px 0 16px 0;
+}
+
+.rightBoxTopNav,
+.rightBoxTopTextBox {
+    font-size: 16px;
+}
+
+@media(max-width:1200px) {
+    .rightBox {
+        padding: 0 12px;
+    }
+
+    .rightBox {
+        width: 100%;
+    }
+}
