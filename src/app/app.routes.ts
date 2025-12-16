@@ -3,7 +3,8 @@ import { Home } from './pages/home/home';
 import { ProductHomepage } from './pages/product-homepage/product-homepage';
 import { BrandStory } from './pages/brand-story/brand-story';
 import { ProductCollectpage } from './pages/product-collectpage/product-collectpage';
-
+import { Login } from './pages/login/login';
+import { Register } from './pages/register/register';
 
 export const routes: Routes = [
     //(path:)後面路徑自己命名
@@ -12,9 +13,9 @@ export const routes: Routes = [
     { path: 'ProductHomepage', component: ProductHomepage },
     { path: 'BrandStory', component: BrandStory },
     { path: 'ProductCollectpage', component: ProductCollectpage },
-
-
-
+    { path: 'Login', component: Login },
+    { path: 'Register', component: Register },
+    // 就不用子路由了
 
 
     { path: '**', component: Home }, //亂打網址到到這 要最下方
