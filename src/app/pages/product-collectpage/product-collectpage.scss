@@ -36,6 +36,7 @@
 
 .rightBoxTopNav {
     color: #6C757D;
+    margin-bottom: 12px;
 }
 
 .rightBoxTopTextBox {
@@ -105,15 +106,14 @@ rightBoxMid {
 
 .rightBoxMidSizeText {
     font-size: 16px;
-
-    // margin-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .rightBoxMidSizeQuantity {
     font-size: 14px;
     color: #D74F4F;
 
-    // margin-top: 8px;
+    margin: 8px 0 0 0;
 }
 
 .rightBoxTopProductName {
@@ -125,6 +125,7 @@ rightBoxMid {
     color: #57A203;
     font-size: 20px;
     font-weight: bold;
+    margin: 16px 0;
 }
 
 .reservation {
@@ -132,6 +133,7 @@ rightBoxMid {
     justify-content: space-between;
     gap: 8px;
     cursor: pointer;
+    margin-top: 48px;
 }
 
 .reservationAdd {
@@ -166,11 +168,22 @@ rightBoxMid {
     /* 或者使用精確的十六進位碼: #FFFFFF */
 }
 
+.rightBoxBot1 {
+    padding: 12px 0;
+    border-bottom: 1px solid #DEE2E6;
+}
+
 .rightBoxBotTitle {
     font-weight: 500;
+    margin-bottom: 4px;
 }
-.rightBoxBotContent{
+
+.rightBoxBotContent {
     color: #6C757D;
+}
+
+.rightBoxMidColor {
+    margin: 32px 0;
 }
 
 @media(max-width:1200px) {
@@ -217,7 +230,7 @@ rightBoxMid {
     .rightBoxTopProductPrice {
 
         font-size: 16px;
-
+        margin: 13px 0;
     }
 
     .reservationAdd {
@@ -228,4 +241,11 @@ rightBoxMid {
         @include m.center-flex
     }
 
+    .rightBoxTopNav {
+        margin-bottom: 8px;
+    }
+
+    .reservation {
+        margin-top: 24px;
+    }
 }
