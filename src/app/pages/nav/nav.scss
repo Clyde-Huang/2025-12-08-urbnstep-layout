@@ -101,7 +101,7 @@ main {
   .textBox ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 60px;
+    grid-template-rows: 48px 48px;
     gap: 0;
     padding: 0;
     height: 100%;
@@ -137,7 +137,7 @@ main {
     background-color: #E8FEC5;
     text-align: center;
     width: 100%;
-    height: 60px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,7 +149,7 @@ main {
     background-color: #F5FEE7;
     text-align: center;
     width: 100%;
-    height: 60px;
+    height: 48px;
     display: flex;
     align-items: center;
     justify-content: center;

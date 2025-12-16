@@ -78,7 +78,7 @@
    height: 48px;
    width: 115px;
    font-size: 16px;
-   font-weight: 500;
+   font-weight: 600;
    margin-top: 48px;
    cursor: pointer;
    padding: 12px 24px;
@@ -276,6 +276,9 @@
  .graytext {
    font-size: 20px;
    color: #ADB5BD;
+   margin-top: 32px;
+   font-weight: 400;
+   letter-spacing: 5%;
  }
 
  .grayhover {
@@ -293,6 +296,11 @@
    justify-content: center;
    text-align: center;
    color: white;
+   font-size: 24px;
+ }
+
+ .grayhover:hover {
+   color: #C0FA73;
  }
 
  h2 {
@@ -410,7 +418,7 @@
 
  @media (max-width: 1200px) {
    nav {
-     height: 120px;
+     height: 108px; //figma上是120px nav那邊沒調好
    }
 
    .topBox {
@@ -569,8 +577,7 @@
    .graytext {
      width: 351px;
      font-size: 16px;
-     font-weight: 400;
-     letter-spacing: 5%;
+     margin-top: 24px;
    }
 
    .comma {
@@ -589,7 +596,7 @@
      z-index: 10;
 
      top: -36px;
-     left: -30.29px; //慢慢調
+     left: -29.5px; //慢慢調
 
    }
 
@@ -628,5 +635,13 @@
      width: 300px;
      height: 300px;
      object-fit: cover;
+   }
+
+   .grayhover {
+     font-size: 16px;
+   }
+
+   .productTitle {
+     font-size: 16px;
    }
  }

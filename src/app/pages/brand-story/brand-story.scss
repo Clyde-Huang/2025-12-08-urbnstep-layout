@@ -12,6 +12,17 @@
   gap: 16px;
 }
 
+.contentContainer {
+  max-width: 1076px;
+  margin: 0 auto;
+  padding: 0 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 48px;
+}
+
 .brandStoryzh {
   font-size: 40px;
 }
@@ -26,10 +37,8 @@
 }
 
 .midBox {
-  padding: 64px 422px 48px 422px;
-  @include center-flex;
-  flex-direction: column;
-  gap: 48px;
+  padding: 64px 0 0 0;
+
 }
 
 .greenBox {
@@ -55,15 +64,17 @@
 }
 
 .introductionBoxTitle {
+
   font-size: 24px;
   font-weight: bold;
-  padding: 0 110px;
+  margin-bottom: 8px;
   align-self: start;
+  padding: 0;
 }
 
 .introductionBoxPic img {
   width: 100%;
-  max-width: 1076px;
+  // max-width: 1076px;
   // height: 100%;
 }
 
@@ -86,6 +97,7 @@
   max-width: 1076px;
   display: flex;
   align-items: center;
+
   flex-direction: column;
   gap: 24px;
 }
@@ -107,11 +119,12 @@
   // padding: 0 532px;
   max-width: 856px;
   width: 100%;
-  max-height: 197px;
+  // max-height: 197px;
   align-items: start;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin: 0 auto;
 }
 
 .courseBoxTitle,
@@ -153,9 +166,9 @@
 }
 
 .bottomBox {
-  @include center-flex;
-  flex-direction: column;
-  gap: 48px;
+  padding-top: 48px;
+  // padding-bottom: 48px;
+
 }
 
 .storyBoxUl ul li {
@@ -180,7 +193,7 @@
 
 
 
-@media (max-width: 1250px) {
+@media (max-width: 1200px) {
   .topPic {
     background-image: url('https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-week3-4/hero-sm.png');
     background-size: cover;
@@ -189,6 +202,11 @@
     max-width: 1920px;
     height: 240px;
     gap: 8px;
+  }
+
+  .contentContainer {
+
+    gap: 32px;
   }
 
   .brandStoryzh {
@@ -200,8 +218,8 @@
   }
 
   .midBox {
-    padding: 32px 12px;
-    gap: 32px;
+    padding: 32px 0 0 0;
+    // gap: 32px;
   }
 
   .greenBox {
@@ -236,16 +254,17 @@
 
   }
 
-  // .introductionBoxTitle {
-  //   //
-  //   padding: 0;
-  // }
+  .introductionBoxTitle {
+    margin-bottom: 4px;
+  }
 
   .introductionBoxContentBox {
     padding: 0 0px 16px 0px;
+    gap: 12px;
   }
 
   .forBorderBottom {
+    border-bottom: 1px solid #CED4DA;
     padding-bottom: 32px;
   }
 
@@ -253,22 +272,9 @@
     font-size: 16px;
   }
 
-  .courseBox,
-  .conceptBox,
-  .storyBox {
-    padding: 0 12px 32px 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
 
-  .courseBox {
-    max-height: 240px
-  }
 
   .bottomBox {
-    @include center-flex;
-    flex-direction: column;
-    gap: 32px;
+    padding: 32px 0 0 0;
   }
 }
