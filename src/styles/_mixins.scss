@@ -6,6 +6,14 @@
   align-items: center;
 }
 
+@mixin hover-bg-effect($color: #E9ECEF) {
+  transition: color 0.2s ease; // 讓變色平滑
+
+  &:hover {
+    color: $color;
+  }
+}
+
 @mixin ellipsis($lines: 1) {
   @if $lines ==1 {
     overflow: hidden;

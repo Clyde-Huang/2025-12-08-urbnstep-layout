@@ -4,7 +4,7 @@ import { Router, RouterModule } from '@angular/router';
 import { Nav } from '../nav/nav';
 import { Footer } from '../footer/footer';
 import { ProductService } from '../../@services/product.service';
-
+import { ChangeDetectorRef } from '@angular/core';
 interface Product {
   圖片: string;
   名稱: string;
@@ -28,14 +28,16 @@ export class ProductHomepage implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private router: Router
+    private router: Router,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe({
       next: (data) => {
         this.products = data;
-        this.filteredProducts = data;
+        this.filteredProducts = [...data];
+      this.cdr.detectChanges();
         console.log('產品資料:', this.products);
       },
       error: (error) => {
