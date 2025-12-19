@@ -16,4 +16,6 @@ jobs:
           # 讓 Action 上傳報告，這樣你可以看到視覺化圖表
           uploadArtifacts: true 
           # 設定分數門檻，如果低於 90 分，GitHub Action 會顯示失敗 (紅叉)
+          temporaryPublicStorage: true # 加入這行，Log 會出現一個 storage.googleapis.com... 的連結
+
           budgetPath: ./lighthouse-budgets.json 
