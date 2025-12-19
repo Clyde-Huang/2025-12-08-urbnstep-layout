@@ -1,0 +1,15 @@
+[
+  {
+    "path": "/*",
+    "resourceSizes": [
+      { "resourceType": "total", "budget": 1000000 }
+    ],
+    "resourceCounts": [
+      { "resourceType": "third-party", "budget": 10 }
+    ],
+    "performance": 90,
+    "accessibility": 90,
+    "best-practices": 90,
+    "seo": 80
+  }
+]
