@@ -1,0 +1,19 @@
+//全域樣式設定
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  color: #212529;
+  //line-height: 1.5; // 通常 Base 也會包含行高
+  -webkit-font-smoothing: antialiased; // 字體優化
+}
+
+
+// 必須補上這一塊，否則 Angular 元件內部的 input/button/a 不會套用顏色
+input,
+button,
+textarea,
+select,
+a {
+  font-family: inherit;
+  // color: inherit; //因為我都設顏色了 之後可以用
+}

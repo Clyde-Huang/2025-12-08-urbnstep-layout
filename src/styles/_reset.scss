@@ -1,9 +1,10 @@
 // 幾乎等於全域設定
+// 主要是消除樣式差異，讓各瀏覽器呈現一致的效果
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans TC", sans-serif;
-  color: #212529;
+  // font-family: "Noto Sans TC", sans-serif;
+  // color: #212529; //移到base
 }
