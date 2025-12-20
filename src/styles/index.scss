@@ -1,6 +1,14 @@
 // 整合所有 partials 以便於導入
 // 有幾個就@幾個
 
+
+// 如果這些檔案含有真正的 CSS 規則 (例如 body { ... } 或 * { ... })
+// 必須使用 @use 才能將其內容包含進來並輸出
+@use 'reset';
+@use 'base';
+
+// variables 和 mixins 通常只有定義，沒有 CSS 輸出，
+// 如果其他檔案（如 base）有用到它們，應在 base 內部 @use，
+// 這裡可以不用寫，或是用 @forward 提供給組件使用。
 @forward 'variables';
 @forward 'mixins';
-@forward 'reset';
